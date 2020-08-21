@@ -91,8 +91,9 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "LYFramework/LYFramework/LYFramework/**/*.{h,m}"
+#  spec.source_files  = "Classes", "LYFramework/**/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
+
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -135,5 +136,11 @@ Pod::Spec.new do |spec|
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency "SDAutoLayout", "~> 2.2.1"
+
+
+  spec.subspec 'LYUICategory' do |ss|
+    ss.source_files = 'LYFramework/UITools/Categorys/*.{h,m}'
+    ss.public_header_files = 'LYFramework/UITools/Categorys/*.h'
+end
 
 end

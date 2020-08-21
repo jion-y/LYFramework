@@ -15,14 +15,17 @@
     "git": "https://github.com/jion-y/LYFramework.git",
     "tag": "0.0.1"
   },
-  "source_files": [
-    "Classes",
-    "LYFramework/LYFramework/**/*.{h,m}"
-  ],
   "exclude_files": "Classes/Exclude",
   "dependencies": {
     "SDAutoLayout": [
       "~> 2.2.1"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "LYUICategory",
+      "source_files": "LYFramework/UITools/Categorys/*.{h,m}",
+      "public_header_files": "LYFramework/UITools/Categorys/*.h"
+    }
+  ]
 }

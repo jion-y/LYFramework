@@ -1,0 +1,6 @@
+framework module LYFramework {
+  umbrella header "LYFramework-umbrella.h"
+
+  export *
+  module * { export * }
+}

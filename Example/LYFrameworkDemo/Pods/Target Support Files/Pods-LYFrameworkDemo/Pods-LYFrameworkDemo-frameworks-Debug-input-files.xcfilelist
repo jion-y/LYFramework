@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-LYFrameworkDemo/Pods-LYFrameworkDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/LYFramework/LYFramework.framework
 ${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework
