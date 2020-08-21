@@ -225,4 +225,16 @@
     return outputImage;
 }
 
+- (UIImage *)ly_viewShootToImage
+{
+    CGSize size = self.bounds.size;
+    
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:context];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+    
+}
 @end

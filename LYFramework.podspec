@@ -141,6 +141,11 @@ Pod::Spec.new do |spec|
   spec.subspec 'LYUICategory' do |ss|
     ss.source_files = 'LYFramework/UITools/Categorys/*.{h,m}'
     ss.public_header_files = 'LYFramework/UITools/Categorys/*.h'
-end
+  end
+  
+  spec.subspec 'LYFoundationCategory' do |ss|
+    ss.source_files = 'LYFramework/LYFoundationTools/Categorys/*.{h,m}'
+    ss.public_header_files = 'LYFramework/LYFoundationTools/Categorys/*.h'
+  end
 
 end

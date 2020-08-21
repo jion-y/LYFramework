@@ -132,6 +132,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIImage *)ly_createImageFromLayerWithFrame:(CGRect)frame
                                     andColors:(NSArray * )colors;
 
+
+/// 当前 view 截图
+- (UIImage *)ly_viewShootToImage;
+
 @end
 
 NS_ASSUME_NONNULL_END
