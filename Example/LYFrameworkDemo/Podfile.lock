@@ -2,10 +2,12 @@ PODS:
   - LYFramework (0.0.1):
     - LYFramework/LYAutoLayout (= 0.0.1)
     - LYFramework/LYFoundationCategory (= 0.0.1)
+    - LYFramework/LYThemeKit (= 0.0.1)
     - LYFramework/LYUICategory (= 0.0.1)
   - LYFramework/LYAutoLayout (0.0.1):
     - SDAutoLayout (~> 2.2.1)
   - LYFramework/LYFoundationCategory (0.0.1)
+  - LYFramework/LYThemeKit (0.0.1)
   - LYFramework/LYUICategory (0.0.1)
   - SDAutoLayout (2.2.1)
 
@@ -21,7 +23,7 @@ EXTERNAL SOURCES:
     :path: "../../"
 
 SPEC CHECKSUMS:
-  LYFramework: d586538553feb669d41ef979ba5d5d3546512d19
+  LYFramework: 524a32240e975b6e40a585378ccdb060a38bcd02
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
 
 PODFILE CHECKSUM: 3d4ae3dd6f633d967863b0e8c61e0ea379253c00

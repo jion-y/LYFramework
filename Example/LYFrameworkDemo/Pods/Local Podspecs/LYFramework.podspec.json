@@ -36,6 +36,11 @@
       },
       "source_files": "LYFramework/LYAutoLayout/*.{h,m}",
       "public_header_files": "LYFramework/LYAutoLayout/*.h"
+    },
+    {
+      "name": "LYThemeKit",
+      "source_files": "LYFramework/LYThemeKit/*.{h,m}",
+      "public_header_files": "LYFramework/LYThemeKit/*.h"
     }
   ]
 }

@@ -153,5 +153,10 @@ Pod::Spec.new do |spec|
     ss.source_files = 'LYFramework/LYAutoLayout/*.{h,m}'
     ss.public_header_files = 'LYFramework/LYAutoLayout/*.h'
   end
+  spec.subspec 'LYThemeKit' do |ss|
+    ss.source_files = 'LYFramework/LYThemeKit/*.{h,m}'
+    ss.public_header_files = 'LYFramework/LYThemeKit/*.h'
+  end
+  
 
 end
