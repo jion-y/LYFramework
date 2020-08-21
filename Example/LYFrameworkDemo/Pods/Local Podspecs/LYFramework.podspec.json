@@ -16,11 +16,6 @@
     "tag": "0.0.1"
   },
   "exclude_files": "Classes/Exclude",
-  "dependencies": {
-    "SDAutoLayout": [
-      "~> 2.2.1"
-    ]
-  },
   "subspecs": [
     {
       "name": "LYUICategory",
@@ -31,6 +26,16 @@
       "name": "LYFoundationCategory",
       "source_files": "LYFramework/LYFoundationTools/Categorys/*.{h,m}",
       "public_header_files": "LYFramework/LYFoundationTools/Categorys/*.h"
+    },
+    {
+      "name": "LYAutoLayout",
+      "dependencies": {
+        "SDAutoLayout": [
+          "~> 2.2.1"
+        ]
+      },
+      "source_files": "LYFramework/LYAutoLayout/*.{h,m}",
+      "public_header_files": "LYFramework/LYAutoLayout/*.h"
     }
   ]
 }

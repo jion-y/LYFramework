@@ -135,7 +135,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency "SDAutoLayout", "~> 2.2.1"
+ 
 
 
   spec.subspec 'LYUICategory' do |ss|
@@ -146,6 +146,12 @@ Pod::Spec.new do |spec|
   spec.subspec 'LYFoundationCategory' do |ss|
     ss.source_files = 'LYFramework/LYFoundationTools/Categorys/*.{h,m}'
     ss.public_header_files = 'LYFramework/LYFoundationTools/Categorys/*.h'
+  end
+  
+  spec.subspec 'LYAutoLayout' do |ss|
+     ss.dependency 'SDAutoLayout', '~> 2.2.1'
+    ss.source_files = 'LYFramework/LYAutoLayout/*.{h,m}'
+    ss.public_header_files = 'LYFramework/LYAutoLayout/*.h'
   end
 
 end

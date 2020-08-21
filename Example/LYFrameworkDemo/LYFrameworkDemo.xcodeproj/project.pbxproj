@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -97,7 +97,6 @@
 				41D9578EFA9CBFF6082DB117 /* Pods-LYFrameworkDemo.debug.xcconfig */,
 				97782664EBC988A545ECFCB0 /* Pods-LYFrameworkDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -365,6 +364,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"LYFramework\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuming.LYFrameworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -381,6 +388,14 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"LYFramework\"",
+					"-framework",
+					"\"SDAutoLayout\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuming.LYFrameworkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
