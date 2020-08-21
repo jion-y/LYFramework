@@ -61,6 +61,19 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param size 大小
  */
 + (CGSize)sizeWithString:(NSString *)string font:(UIFont *)font size:(CGSize)size;
+
+/// 对象转json
+/// @param jsonObject 字典、数组...
+- (NSString *)objectToJson:(id)jsonObject;
+
+/// json转对象
+-(id)jsonToObject;
+
+/// json转字典
+-(NSDictionary *)jsonToDictionary;
+
+/// json转数组
+-(NSArray *)jsonToArray;
 @end
 
 NS_ASSUME_NONNULL_END

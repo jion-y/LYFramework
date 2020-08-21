@@ -263,16 +263,19 @@
 + (BOOL)checkStringIsOnlyDigital:(NSString *)str
 {
     NSString *string = [str stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
-    if(string.length >0)
+    if (string.length > 0)
     {
         return NO;
-    }else return YES;
+    }
+    else
+        return YES;
 }
 
 //检查字符串是否为nil 转为@""
 + (NSString *)checkStringValue:(id)str
 {
-    if ([str isKindOfClass:[NSNull class]]) {
+    if ([str isKindOfClass:[NSNull class]])
+    {
         return @"";
     }
     return str;
@@ -284,7 +287,8 @@
     for (int i = 0; i < string.length; i++)
     {
         int a = [string characterAtIndex:i];
-        if (a >= 0x4e00 && a <= 0x9fff) {
+        if (a >= 0x4e00 && a <= 0x9fff)
+        {
             return YES;
         }
     }
@@ -302,7 +306,57 @@
  */
 + (CGSize)sizeWithString:(NSString *)string font:(UIFont *)font size:(CGSize)size
 {
-    NSDictionary *dic = @{NSFontAttributeName:font};
-    return [string boundingRectWithSize:size options:(NSStringDrawingUsesLineFragmentOrigin) attributes:dic context:nil].size;
+    NSDictionary *dic = @{NSFontAttributeName : font};
+    return [string boundingRectWithSize:size options:(NSStringDrawingUsesLineFragmentOrigin) attributes:dic context:nil]
+        .size;
+}
+
+- (NSString *)objectToJson:(id)jsonObject
+{
+    if (jsonObject == nil) return nil;
+    NSError *error = nil;
+    NSData *jsonData =
+        [NSJSONSerialization dataWithJSONObject:jsonObject options:NSJSONWritingPrettyPrinted error:&error];
+    if (error)
+    {
+        NSLog(@"jsonObject to json error : %@", error);
+        return nil;
+    }
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+
+-(id)jsonToObject
+{
+    if (self == nil) return nil;
+    NSData *jsonData = [self dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    if (error) {
+        NSLog(@"json to jsonObject error : %@",error);
+        return nil;
+    }
+    return jsonObject;
+}
+
+-(NSDictionary *)jsonToDictionary
+{
+    id jsonObject = [self jsonObjectWithJsonString:self];
+    if (jsonObject == nil) return nil;
+    if ([jsonObject isKindOfClass:[NSDictionary class]]) {
+        return (NSDictionary *)jsonObject;
+    }
+    NSLog(@"json is not dictionary");
+    return nil;
+}
+
+-(NSArray *)jsonToArray
+{
+    id jsonObject = [self jsonObjectWithJsonString:self];
+    if (jsonObject == nil) return nil;
+    if ([jsonObject isKindOfClass:[NSArray class]]) {
+        return (NSArray *)jsonObject;
+    }
+    NSLog(@"json is not array");
+    return nil;
 }
 @end
