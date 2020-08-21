@@ -6,6 +6,6 @@ target 'LYFrameworkDemo' do
   use_frameworks!
 
   # Pods for LYFrameworkDemo
-   pod 'NXFramework', :path => '../'
+   pod 'LYFramework', :path => '../../'
   
 end

@@ -1,0 +1,16 @@
+PODS:
+  - LYFramework (0.0.1)
+
+DEPENDENCIES:
+  - LYFramework (from `../../`)
+
+EXTERNAL SOURCES:
+  LYFramework:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  LYFramework: 7b5e5f7b935d77d47e24d75cde0630145914d26f
+
+PODFILE CHECKSUM: 3d4ae3dd6f633d967863b0e8c61e0ea379253c00
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,23 @@
+{
+  "name": "LYFramework",
+  "version": "0.0.1",
+  "summary": "为 app 开发提供基础工具模块 framework.",
+  "description": "为 app 开发提供基础工具模块 framework.",
+  "homepage": "https://github.com/jion-y/LYFramework",
+  "license": "MIT",
+  "authors": {
+    "liuming": "1969489778@qq.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/jion-y/LYFramework.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "LYFramework/LYFramework/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude"
+}
