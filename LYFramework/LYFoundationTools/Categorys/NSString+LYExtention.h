@@ -74,6 +74,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// json转数组
 -(NSArray *)jsonToArray;
+
+/// 字符串中是否包含 emjo 表情
++(BOOL)strContainsEmoji:(NSString *)string;
 @end
 
 NS_ASSUME_NONNULL_END
