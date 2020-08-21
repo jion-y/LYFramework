@@ -19,5 +19,10 @@
     "Classes",
     "LYFramework/LYFramework/**/*.{h,m}"
   ],
-  "exclude_files": "Classes/Exclude"
+  "exclude_files": "Classes/Exclude",
+  "dependencies": {
+    "SDAutoLayout": [
+      "~> 2.2.1"
+    ]
+  }
 }
